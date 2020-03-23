@@ -8,11 +8,8 @@
 Их значениями должны быть числа от 1 до 4 соответственно.
 */
 
-const obj = new Object();
-const proto = new Object();
-
-Object.setPrototypeOf(obj, proto);
-Object.setPrototypeOf(proto, null);
+const proto = Object.create(null);
+const obj = Object.create(proto);
 
 Object.defineProperty(proto, "Key1", {
     "enumerable": false,
