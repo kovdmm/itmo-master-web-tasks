@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+	background: #ccc;
+}
+iframe {
+	border: none;
+	margin: 60px auto 0;
+	width: 800px;
+	height: 1120px;
+	display: block;
+	background: #fff;
+}
+.flypanel {
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+.controls {
+	height: 60px;
+	width: 800px;
+	margin: 0 auto;
+	background: #aaa;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.controls a, .controls select {
+	color: #222;
+	height: 40px;
+	line-height: 38px;
+	font-size: 20px;
+	font-family: 'Calibri', sans-serif;
+	font-weight: 600;
+	margin: auto 5px;
+	background: #fff;
+	display: block;
+	border: 1px solid #fff;
+	padding: 0 15px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.controls a:hover {
+	border: 1px solid #fff;
+	background: transparent;
+}
