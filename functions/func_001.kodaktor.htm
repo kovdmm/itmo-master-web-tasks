@@ -1,0 +1,31 @@
+<!-- Task: https://kodaktor.ru/func_001 -->
+<!-- Libs: https://kodaktor.ru/goss_concat, https://kodaktor.ru/j/out -->
+
+<!-- Original code: https://kodaktor.ru/task_func_1 -->
+
+<!-- See result: https://kodaktor.ru/task_func_99d41 -->
+
+<!-- Code: -->
+
+<script src="/j/out"></script>
+
+<button>Посмотреть результат выполнения задания!</button>
+
+<script type="module">
+   import { default as goss_concat } from '/j/goss_concat';
+
+   const _rgb_concat = arr => goss_concat('rgb' + ((arr.length == 3) ? '(' : 'a('), arr, ')');
+   const rgb = (r, g, b) => _rgb_concat([r, g, b]);
+   const rgba = (r, g, b, a) => _rgb_concat([r, g, b, a]);
+  
+   document.querySelector('button')
+   .addEventListener(
+     'click',
+      e => {
+        Out.clear();
+        Out.log(rgb(128, 128, 128));
+        Out.log(rgba(255, 0, 0, 255));
+        e.target.textContent = 'Задание выполнено!'; // вывод результата 
+      }
+   );
+</script>
