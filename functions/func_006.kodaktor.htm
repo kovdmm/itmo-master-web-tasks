@@ -1,0 +1,37 @@
+<!-- Task: https://kodaktor.ru/func_006 -->
+<!-- Access: https://kodaktor.ru/func_006_3219b -->
+<!-- Code: -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FUNC-006</title>
+	<script src="/j/out"></script>
+	<link rel="stylesheet" href="/css/board2">
+	<script src="/babel6.26.0.js"></script>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<script src="/j/dblttl"></script>
+	<script>console.clear();</script>
+	<script type="text/babel" data-presets="stage-0">
+	(function () {
+		
+		// используйте слово this и оператор двойного двоеточия
+		// чтобы вызов square вернул 25
+		// для этого добавьте нужный атрибут в этот элемент script
+
+		const square = function () {
+			return this * this;
+		};
+
+		Number.prototype.square = square;
+
+		Out.log('5 * 5 = ', (::this.square)()); 
+
+	}).bind(5)();
+	</script>
+</body>
+
+</html>
