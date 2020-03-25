@@ -5,6 +5,10 @@
  */
 
 function task(x) {
-    if (x instanceof Function) return x();
-    return 'no';
+	if (x instanceof Function) return x();
+	return 'no';
 }
+
+// or
+
+const task = x => x instanceof Function ? x() : 'no';
