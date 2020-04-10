@@ -1,0 +1,48 @@
+<!-- Task: https://kodaktor.ru/g/e2e_001 -->
+<!-- Access: https://kodaktor.ru/g/kovalev_dmitry_f8900 -->
+<!-- Code: -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>SHA1 Hash</title>
+</head>
+
+<body>
+	<script src="/j/dblttl"></script>
+
+	<input type="text" id="inp">
+	<button id="bt">SHA1</button>
+
+	<script id="code">
+		{
+
+			const qS = s => document.querySelector(s);
+
+			const SHA1 = async str => {
+				const msgUint8 = new TextEncoder().encode(str);
+				const hashBuffer = await crypto.subtle.digest('SHA-1', msgUint8);
+				const hashArray = Array.from(new Uint8Array(hashBuffer));
+				const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+				return hashHex;
+			};
+
+			qS('#bt').addEventListener('click', e => {
+				const $inp = qS('#inp');
+
+				let value = $inp.value;
+
+				SHA1(value).then(hash => $inp.value = hash);
+			});
+
+		}
+	</script>
+
+	<script src="/j/beautify.min.js_6ebc2"></script>
+	<script src="/high.js"></script>
+	<script src="/j/code_to_pre_19f77"></script>
+	<link rel="stylesheet" href="/css/board3">
+	<link rel="stylesheet" href="/css/highcss_atom">
+</body>
+
+</html>
