@@ -1,4 +1,6 @@
 # Generators
+
 ## Трансляторы
-- https://www.onlinegdb.com/
-- http://phptester.net/
+
++ [OnlineGDB для Python, PHP, C# и других языков](https://www.onlinegdb.com/)
++ [PHPTester только для PHP](http://phptester.net/)
